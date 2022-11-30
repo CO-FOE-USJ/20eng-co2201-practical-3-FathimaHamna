@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Q1_Test1",
-      "setup": "g++ Q1_main.cpp -o  Q1_main.out",
+      "setup": "g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out",
       "run": "./Q1_main.out",
       "input": "5\r\n4 8 10 2 7\r\n2\r\n1 5\r\n4",
       "output": "4 8 10 2 7\r\n5 4 8 10 2 7\r\n5 4 8 10 2",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Q2_Test2",
-      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "setup": "g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out",
       "run": "./Q2_main.out",
       "input": "8\r\n3 2 4 9 8 1 10 5\r\n7\r\n10 1 7 6 4 5 9",
       "output": "1 4 5 9 10",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Q2_Test1",
-      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "setup": "g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out",
       "run": "./Q2_main.out",
       "input": "4\r\n1 2 3 4\r\n4\r\n1 2 3 1",
       "output": "Duplicate Found",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Q3_Test1",
-      "setup": "g++ Q3_main.cpp -o  Q3_main.out",
+      "setup": "g++ Q3_main.cpp BinarSearchTree.cpp -o  Q3_main.out",
       "run": "./Q3_main.out",
       "input": "8\r\n8 4 10 6 9 2 12 5\r\n4\r\n1 7\r\n2 6\r\n7\r\n10",
       "output": "8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──7\r\n   │  |  ├──X\r\n   │  |  └──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──7\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n\r\n12",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Q1_Test2",
-      "setup": "g++ Q1_main.cpp -o  Q1_main.out",
+      "setup": "g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out",
       "run": "./Q1_main.out",
       "input": "8\r\n1 2 3 4 5 6 7 8\r\n3\r\n2 9\r\n5 5\r\n8",
       "output": "1 2 3 4 5 6 7 8\r\n1 2 3 4 5 6 7 8 9\r\n1 2 3 4 6 7 8 9\r\n40",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Q1_Test3",
-      "setup": "g++ Q1_main.cpp -o  Q1_main.out",
+      "setup": "g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out",
       "run": "./Q1_main.out",
       "input": "3\r\n10 20 30\r\n2\r\n4\r\n0",
       "output": "10 20 30\r\n10 20",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Q2_Test3",
-      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "setup": "g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out",
       "run": "./Q2_main.out",
       "input": "10\r\n1 2 3 4 5 6 7 8 9 10\r\n10\r\n10 9 8 7 6 5 4 3 2 1",
       "output": "1 2 3 4 5 6 7 8 9 10",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Q2_Test4",
-      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "setup": "g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out",
       "run": "./Q2_main.out",
       "input": "1\r\n0\r\n5\r\n0 1 2 3 0",
       "output": "Duplicate Found",
@@ -81,8 +81,8 @@
       "points": 10
     },
     {
-      "name": "Q3_Test1",
-      "setup": "g++ Q3_main.cpp -o  Q3_main.out",
+      "name": "Q3_Test2",
+      "setup": "g++ Q3_main.cpp BinarSearchTree.cpp -o  Q3_main.out",
       "run": "./Q3_main.out",
       "input": "10\r\n5 10 8 0 1 4 12 2 6 15\r\n3\r\n3\r\n4\r\n5",
       "output": "5\r\n├──10\r\n│  ├──12\r\n│  |  ├──15\r\n│  |  |  ├──X\r\n│  |  |  └──X\r\n│  |  └──X\r\n│  └──8\r\n│     ├──X\r\n│     └──6\r\n│        ├──X\r\n│        └──X\r\n└──0\r\n   ├──1\r\n   |  ├──4\r\n   │  |  ├──X\r\n   │  |  └──2\r\n   │  |     ├──X\r\n   │  |     └──X\r\n   |  └──X\r\n   └──X\r\n\r\n5 0 1 4 2 10 8 6 12 15\r\n\r\n0 1 2 4 5 6 8 10 12 15\r\n\r\n2 4 1 0 6 8 15 12 10 5",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Q3_Test3",
-      "setup": "g++ Q3_main.cpp -o  Q3_main.out",
+      "setup": "g++ Q3_main.cpp BinarSearchTree.cpp -o  Q3_main.out",
       "run": "./Q3_main.out",
       "input": "4\r\n5 5 5 5\r\n3\r\n8\r\n9\r\n10\r\n",
       "output": "5\r\n├──5\r\n│  ├──5\r\n│  |  ├──5\r\n|  │  |  ├──X\r\n|  │  |  └──X\r\n│  |  └──X\r\n│  └──X\r\n└──X\r\n\r\n3\r\n\r\n5\r\n\r\n5",
