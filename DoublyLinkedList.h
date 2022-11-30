@@ -8,7 +8,7 @@ public:
   Node* start;
 public:
   void insertBeg(int X);	//Insert a new node at the beginning
-  void insertEnd(int X);		//Insert a node at the end
+  void insertEnd(int X);	//Insert a node at the end
   void deleteBeg();		//Delete a node from the beginning 
   void deleteEnd();		//Delete a node from the end 
   void Delete(int D);		//Delete a node with a given value 
