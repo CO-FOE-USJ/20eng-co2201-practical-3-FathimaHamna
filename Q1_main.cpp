@@ -16,10 +16,10 @@ int main()
 
 
 	DoublyLinkedList elm1{};
-	cout << "Enter number of elements :";
+	
 	cin >> count;
 
-	cout << "Insert Elements  :";
+	
 	for (int i = 0; i < count;i++)
 	{
 
@@ -28,11 +28,11 @@ int main()
 	}
 
 
-	cout << "\nEnter the number of Operations need to be done : ";
+	
 	cin >> Operations;
 
 
-	cout << "\n\n             OPERATIONS   " << endl;
+	/*cout << "\n\n             OPERATIONS   " << endl;
 	cout << "1 : Insert Begning" << endl;
 	cout << "2 : Insert End" << endl;
 	cout << "3 : Delete Beginning" << endl;
@@ -41,19 +41,19 @@ int main()
 	cout << "6 : Print" << endl;
 	cout << "7 : Search" << endl;
 	cout << "8 : Sum" << endl;
-	cout << "0 : Exit" << endl;
+	cout << "0 : Exit" << endl; */
 
 	while (a < Operations)
 	{
 
-		cout << "\n\nEnter the operation number :";
+		//cout << "\n\nEnter the operation number :";
 		cin >> choice;
 		switch (choice)
 		{
 		case 1:
 		{
 			int num = 0;
-			cout << "\nEnter the number for insert : ";
+			//cout << "\nEnter the number for insert : ";
 			cin >> num;
 			elm1.insertBeg(num);
 			cout << "\nResult : ";
@@ -63,10 +63,10 @@ int main()
 		case 2:
 		{
 			int num = 0;
-			cout << "\nEnter the number for insert : ";
+			//cout << "\nEnter the number for insert : ";
 			cin >> num;
 			elm1.insertEnd(num);
-			cout << "\nResult : ";
+			//cout << "\nResult : ";
 			elm1.print();
 			break;
 		}
@@ -74,24 +74,24 @@ int main()
 		{
 
 			elm1.deleteBeg();
-			cout << "\nResult : ";
+			//cout << "\nResult : ";
 			elm1.print();
 			break;
 		}
 		case 4:
 		{
 			elm1.deleteEnd();
-			cout << "\nResult : ";
+			//cout << "\nResult : ";
 			elm1.print();
 			break;
 		}
 		case 5:
 		{
 			int num = 0;
-			cout << "\nEnter number for delete : ";
+			//cout << "\nEnter number for delete : ";
 			cin >> num;
 			elm1.Delete(num);
-			cout << "\nResult : ";
+			//cout << "\nResult : ";
 			elm1.print();
 			break;
 		}
@@ -105,23 +105,23 @@ int main()
 		case 7:
 		{
 			int n = 0;
-			cout << "\nEnter the number you want to Search : ";
+			//cout << "\nEnter the number you want to Search : ";
 			cin >> n;
 			Node* Ptr = elm1.search(n);
 			if (Ptr->prev == NULL)
 			{
-				cout << "Previous value : NULL " << endl;
-				cout << "Next value : " << Ptr->next->value << endl;
+				//cout << "Previous value : NULL " << endl;
+				cout <<  Ptr->next->value << endl;
 			}
 			else if (Ptr->next == NULL)
 			{
-				cout << "Previous value : " << Ptr->prev->value << endl;
-				cout << "Next value : NULL " << endl;
+				cout << Ptr->prev->value << endl;
+				//cout << "Next value : NULL " << endl;
 			}
 			else
-			{
-				cout << "Previous value : " << Ptr->prev->value << endl;
-				cout << "Next value : " << Ptr->next->value << endl;
+			{ 
+				cout <<  Ptr->prev->value << endl;
+				cout << Ptr->next->value << endl;
 			}
 			break;
 		}
@@ -134,7 +134,7 @@ int main()
 		}
 		default:
 		{
-			cout << "\nError : Invalid operation number!";
+			//cout << "\nError : Invalid operation number!";
 			break;
 		}
 
