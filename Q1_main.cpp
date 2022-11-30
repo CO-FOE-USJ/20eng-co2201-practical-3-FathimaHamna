@@ -56,7 +56,7 @@ int main()
 			//cout << "\nEnter the number for insert : ";
 			cin >> num;
 			elm1.insertBeg(num);
-			cout << "\nResult : ";
+			//cout << "\nResult : ";
 			elm1.print();
 			break;
 		}
