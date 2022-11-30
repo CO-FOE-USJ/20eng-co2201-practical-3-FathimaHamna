@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Q1_Test1",
+      "setup": "g++ Q1_main.cpp -o  Q1_main.out",
+      "run": "./Q1_main.out",
+      "input": "5\r\n4 8 10 2 7\r\n2\r\n1 5\r\n4",
+      "output": "4 8 10 2 7\r\n5 4 8 10 2 7\r\n5 4 8 10 2",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Q2_Test2",
+      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "run": "./Q2_main.out",
+      "input": "8\r\n3 2 4 9 8 1 10 5\r\n7\r\n10 1 7 6 4 5 9",
+      "output": "1 4 5 9 10",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Q2_Test1",
+      "setup": "g++ Q2_main.cpp -o  Q2_main.out",
+      "run": "./Q2_main.out",
+      "input": "4\r\n1 2 3 4\r\n4\r\n1 2 3 1",
+      "output": "Duplicate Found",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Q3_Test1",
+      "setup": "g++ Q3_main.cpp -o  Q3_main.out",
+      "run": "./Q3_main.out",
+      "input": "8\r\n8 4 10 6 9 2 12 5\r\n4\r\n1 7\r\n2 6\r\n7\r\n10",
+      "output": "8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──7\r\n   │  |  ├──X\r\n   │  |  └──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──7\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n\r\n12",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
