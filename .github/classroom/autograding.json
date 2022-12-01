@@ -95,7 +95,7 @@
       "setup": "g++ Q3_main.cpp BinarSearchTree.cpp -o  Q3_main.out",
       "run": "./Q3_main.out",
       "input": "4\r\n5 5 5 5\r\n3\r\n8\r\n9\r\n10\r\n",
-      "output": "5\r\n├──5\r\n│  ├──5\r\n│  │  ├──5\r\n│  │  │  ├──X\r\n│  │  │  └──X\r\n│  │  └──X\r\n│  └──X\r\n└──X\r\n\r\n3\r\n\r\n5\r\n\r\n5",
+      "output": "5\r\n├──5\r\n│  ├──5\r\n│  │  ├──5\r\n│  │  │  ├──X\r\n│  │  │  └──X\r\n│  │  └──X\r\n│  └──X\r\n└──X\r\n\r\n4\r\n\r\n5\r\n\r\n5",
       "comparison": "included",
       "timeout": 10,
       "points": 10
