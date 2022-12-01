@@ -35,7 +35,7 @@
       "setup": "g++ Q3_main.cpp BinarSearchTree.cpp -o  Q3_main.out",
       "run": "./Q3_main.out",
       "input": "8\r\n8 4 10 6 9 2 12 5\r\n4\r\n1 7\r\n2 6\r\n7\r\n10",
-      "output": "8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   |  ├──7\r\n   │  |  ├──X\r\n   │  |  └──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  |  ├──X\r\n│  |  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──7\r\n   |  ├──X\r\n   |  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n\r\n12",
+      "output": "8\r\n├──10\r\n│  ├──12\r\n│  │  ├──X\r\n│  │  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   │  ├──X\r\n   │  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  │  ├──X\r\n│  │  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──6\r\n   │  ├──7\r\n   │  │  ├──X\r\n   │  │  └──X\r\n   │  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n├──10\r\n│  ├──12\r\n│  │  ├──X\r\n│  │  └──X\r\n│  └──9\r\n│     ├──X\r\n│     └──X\r\n└──4\r\n   ├──7\r\n   │  ├──X\r\n   │  └──5\r\n   │     ├──X\r\n   │     └──X\r\n   └──2\r\n      ├──X\r\n      └──X\r\n\r\n8\r\n\r\n12",
       "comparison": "included",
       "timeout": 10,
       "points": 10
