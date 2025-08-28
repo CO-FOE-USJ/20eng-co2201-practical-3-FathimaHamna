@@ -1,16 +1,311 @@
-name: GitHub Classroom Workflow
-
-on: [push]
-
+name: Autograding Tests
+'on':
+- workflow_dispatch
+- repository_dispatch
 permissions:
   checks: write
   actions: read
   contents: read
-
 jobs:
-  build:
-    name: Autograding
+  run-autograding-tests:
     runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
     steps:
-      - uses: actions/checkout@v2
-      - uses: education/autograding@v1
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Q1_Test1
+      id: q1_test1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q1_Test1
+        setup-command: g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out
+        command: "./Q1_main.out"
+        input: |-
+          5
+          4 8 10 2 7
+          2
+          1 5
+          4
+        expected-output: |-
+          4 8 10 2 7
+          5 4 8 10 2 7
+          5 4 8 10 2
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q2_Test2
+      id: q2_test2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q2_Test2
+        setup-command: g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out
+        command: "./Q2_main.out"
+        input: |-
+          8
+          3 2 4 9 8 1 10 5
+          7
+          10 1 7 6 4 5 9
+        expected-output: 1 4 5 9 10
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q2_Test1
+      id: q2_test1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q2_Test1
+        setup-command: g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out
+        command: "./Q2_main.out"
+        input: |-
+          4
+          1 2 3 4
+          4
+          1 2 3 1
+        expected-output: Duplicate Found
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q3_Test1
+      id: q3_test1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q3_Test1
+        setup-command: g++ Q3_main.cpp BinarySearchTree.cpp -o  Q3_main.out
+        command: "./Q3_main.out"
+        input: |-
+          8
+          8 4 10 6 9 2 12 5
+          4
+          1 7
+          2 6
+          7
+          10
+        expected-output: |-
+          8
+          ├──10
+          │  ├──12
+          │  │  ├──X
+          │  │  └──X
+          │  └──9
+          │     ├──X
+          │     └──X
+          └──4
+             ├──6
+             │  ├──X
+             │  └──5
+             │     ├──X
+             │     └──X
+             └──2
+                ├──X
+                └──X
+
+          8
+          ├──10
+          │  ├──12
+          │  │  ├──X
+          │  │  └──X
+          │  └──9
+          │     ├──X
+          │     └──X
+          └──4
+             ├──6
+             │  ├──7
+             │  │  ├──X
+             │  │  └──X
+             │  └──5
+             │     ├──X
+             │     └──X
+             └──2
+                ├──X
+                └──X
+
+          8
+          ├──10
+          │  ├──12
+          │  │  ├──X
+          │  │  └──X
+          │  └──9
+          │     ├──X
+          │     └──X
+          └──4
+             ├──7
+             │  ├──X
+             │  └──5
+             │     ├──X
+             │     └──X
+             └──2
+                ├──X
+                └──X
+
+          8
+
+          12
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q1_Test2
+      id: q1_test2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q1_Test2
+        setup-command: g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out
+        command: "./Q1_main.out"
+        input: |-
+          8
+          1 2 3 4 5 6 7 8
+          3
+          2 9
+          5 5
+          8
+        expected-output: |-
+          1 2 3 4 5 6 7 8
+          1 2 3 4 5 6 7 8 9
+          1 2 3 4 6 7 8 9
+          40
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q1_Test3
+      id: q1_test3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q1_Test3
+        setup-command: g++ Q1_main.cpp DoublyLinkedList.cpp -o  Q1_main.out
+        command: "./Q1_main.out"
+        input: |-
+          3
+          10 20 30
+          2
+          4
+          0
+        expected-output: |-
+          10 20 30
+          10 20
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q2_Test3
+      id: q2_test3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q2_Test3
+        setup-command: g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out
+        command: "./Q2_main.out"
+        input: |-
+          10
+          1 2 3 4 5 6 7 8 9 10
+          10
+          10 9 8 7 6 5 4 3 2 1
+        expected-output: 1 2 3 4 5 6 7 8 9 10
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q2_Test4
+      id: q2_test4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q2_Test4
+        setup-command: g++ Q2_main.cpp DoublyLinkedList.cpp -o  Q2_main.out
+        command: "./Q2_main.out"
+        input: |-
+          1
+          0
+          5
+          0 1 2 3 0
+        expected-output: Duplicate Found
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q3_Test2
+      id: q3_test2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q3_Test2
+        setup-command: g++ Q3_main.cpp BinarySearchTree.cpp -o  Q3_main.out
+        command: "./Q3_main.out"
+        input: |-
+          10
+          5 10 8 0 1 4 12 2 6 15
+          3
+          3
+          4
+          5
+        expected-output: |-
+          5
+          ├──10
+          │  ├──12
+          │  │  ├──15
+          │  │  │  ├──X
+          │  │  │  └──X
+          │  │  └──X
+          │  └──8
+          │     ├──X
+          │     └──6
+          │        ├──X
+          │        └──X
+          └──0
+             ├──1
+             │  ├──4
+             │  │  ├──X
+             │  │  └──2
+             │  │     ├──X
+             │  │     └──X
+             │  └──X
+             └──X
+
+          5 0 1 4 2 10 8 6 12 15
+
+          0 1 2 4 5 6 8 10 12 15
+
+          2 4 1 0 6 8 15 12 10 5
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Q3_Test3
+      id: q3_test3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Q3_Test3
+        setup-command: g++ Q3_main.cpp BinarySearchTree.cpp -o  Q3_main.out
+        command: "./Q3_main.out"
+        input: |
+          4
+          5 5 5 5
+          3
+          8
+          9
+          10
+        expected-output: |-
+          5
+          ├──5
+          │  ├──5
+          │  │  ├──5
+          │  │  │  ├──X
+          │  │  │  └──X
+          │  │  └──X
+          │  └──X
+          └──X
+
+          4
+
+          5
+
+          5
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        Q1_TEST1_RESULTS: "${{steps.q1_test1.outputs.result}}"
+        Q2_TEST2_RESULTS: "${{steps.q2_test2.outputs.result}}"
+        Q2_TEST1_RESULTS: "${{steps.q2_test1.outputs.result}}"
+        Q3_TEST1_RESULTS: "${{steps.q3_test1.outputs.result}}"
+        Q1_TEST2_RESULTS: "${{steps.q1_test2.outputs.result}}"
+        Q1_TEST3_RESULTS: "${{steps.q1_test3.outputs.result}}"
+        Q2_TEST3_RESULTS: "${{steps.q2_test3.outputs.result}}"
+        Q2_TEST4_RESULTS: "${{steps.q2_test4.outputs.result}}"
+        Q3_TEST2_RESULTS: "${{steps.q3_test2.outputs.result}}"
+        Q3_TEST3_RESULTS: "${{steps.q3_test3.outputs.result}}"
+      with:
+        runners: q1_test1,q2_test2,q2_test1,q3_test1,q1_test2,q1_test3,q2_test3,q2_test4,q3_test2,q3_test3
